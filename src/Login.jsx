@@ -1,17 +1,24 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { setItem } from "./services/LocalStorageFuncs";
+import { getItem } from "./services/LocalStorageFuncs";
 
 export const Login = (props) => {
-  const [name, setName] = useState("");
-  const [pass, setPass] = useState("");
+  const user = getItem('usuario')
+  const [name, setName] = useState(user.name || "");
+  const [pass, setPass] = useState(user.pass || "");
 
   const condition = name.length >= 3 && pass.length > 5;
 
   const saveUser = () => {
-    setItem('usuario', {name, pass})
     // eslint-disable-next-line react/prop-types
     const { history: { push } } = props;
+    
+    if(name === user.name && pass === user.pass) {
+    push('/store')
+    return;
+    }
+    setItem('usuario', {name, pass})
     push('/store')
   }
 
