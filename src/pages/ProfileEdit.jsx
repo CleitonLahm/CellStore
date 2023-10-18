@@ -5,10 +5,10 @@ import {  getItem, setItem } from "../services/LocalStorageFuncs";
 export const ProfileEdit = (props) => {
   const user = getItem('usuario')
   const [name, setName] = useState( user?.name || "");
-  const [email, setEmail] = useState(user.email || "");
+  const [email, setEmail] = useState(user?.email || "");
   const [pass, setPass] = useState(user?.pass || "");
-  const [img, setImg] = useState(user.img || "");
-  const [cpf, setCpf] = useState(user.cpf || "");
+  const [img, setImg] = useState(user?.img || "");
+  const [cpf, setCpf] = useState(user?.cpf || "");
 
   const condition = (
     name.length >= 3 && (email.includes('@') && email.length > 8)
