@@ -31,7 +31,7 @@ const user = getItem('usuario')
       <h2>Sua compra foi concluida com sucesso!!</h2>
       <span><AiFillCheckCircle /></span>
       <h4>{`Valor final: R$ ${price}`}</h4>
-      <h4>{`Comprador: ${user.name}`}</h4>
+      <h4>{`Comprador: ${user?.name}`}</h4>
       <h4>{`Prazo de entrega: ${ Math.ceil(Math.random() * 20 ) + 1} dias`}</h4>
     </PaymentArea>
       )

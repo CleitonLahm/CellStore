@@ -5,8 +5,8 @@ import { getItem } from "./services/LocalStorageFuncs";
 
 export const Login = (props) => {
   const user = getItem('usuario')
-  const [name, setName] = useState(user.name || "");
-  const [pass, setPass] = useState(user.pass || "");
+  const [name, setName] = useState(user?.name || "");
+  const [pass, setPass] = useState(user?.pass || "");
   const [passIncorrect, setPassIncorrect] = useState(false)
 
   const condition = name.length >= 3 && pass.length > 5;

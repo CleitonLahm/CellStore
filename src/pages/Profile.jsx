@@ -12,10 +12,10 @@ export const Profile = (props) => {
     }
   return(
       <div>
-        <p>{`Name: ${user.name}`}</p>
-        <p>{`E-mail: ${user.email}`}</p>
-        <p>{`CPF: ${user.cpf}`}</p>
-        <img src={user.img} alt="img-user"></img>
+        <p>{`Name: ${user?.name}`}</p>
+        <p>{`E-mail: ${user?.email}`}</p>
+        <p>{`CPF: ${user?.cpf}`}</p>
+        <img src={user?.img} alt="img-user"></img>
         <br />
         <br />
         <button
