@@ -13,10 +13,10 @@ export const Content = () => {
     <Switch>
       <Route exact path="/payment/:price" component={ Payment } />
       <Route exact path="/profile/edit" component={ ProfileEdit } />
-      <Route exact path="/" component={ Profile } />
+      <Route exact path="/profile" component={ Profile } />
       <Route exact path="/cart" component={ Cart } />
       <Route exact path="/store" component={ Store } />
-      <Route exact path="/login" component={ Login } />
+      <Route exact path="/" component={ Login } />
     </Switch>
   );
 };
